@@ -1,13 +1,10 @@
-// demo: CAN-BUS Shield, receive data with check mode
-// send data coming to fast, such as less than 10ms, you can use this way
-// loovee, 2014-6-13
-
+// receive a frame from can bus
 
 #include <SPI.h>
 #include "mcp_can.h"
 
-
-const int SPI_CS_PIN = 17;
+const int SPI_CS_PIN = 17;              // CANBed V1
+// const int SPI_CS_PIN = 3;            // CANBed M0
 
 MCP_CAN CAN(SPI_CS_PIN);                                    // Set CS pin
 

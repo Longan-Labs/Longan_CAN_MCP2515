@@ -1,12 +1,13 @@
-// demo: CAN-BUS Shield, receive data with interrupt mode, and set mask and filter
-//
-// when in interrupt mode, the data coming can't be too fast, must >20ms, or else you can use check mode
-// loovee, 2014-7-8
+// receive a frame from can bus with mask and filter setting
 
 #include <SPI.h>
 #include "mcp_can.h"
 
-const int SPI_CS_PIN = 17;
+#include <SPI.h>
+#include "mcp_can.h"
+
+const int SPI_CS_PIN = 17;              // CANBed V1
+// const int SPI_CS_PIN = 3;            // CANBed M0
 
 MCP_CAN CAN(SPI_CS_PIN);                                    // Set CS pin
 

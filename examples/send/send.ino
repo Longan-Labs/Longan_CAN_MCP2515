@@ -1,10 +1,13 @@
-// demo: CAN-BUS Shield, send data
-// loovee@seeed.cc
+// send a frame from can bus
+
+#include <SPI.h>
+#include "mcp_can.h"
 
 #include <mcp_can.h>
 #include <SPI.h>
 
-const int SPI_CS_PIN = 17;
+const int SPI_CS_PIN = 17;              // CANBed V1
+// const int SPI_CS_PIN = 3;            // CANBed M0
 
 MCP_CAN CAN(SPI_CS_PIN);                                    // Set CS pin
 
